@@ -7,41 +7,47 @@ const Hero = () => {
   const [videoModalOpen, setVideoModalOpen] = useState(false);
 
   return (
-    <section className="min-h-screen flex items-center pt-20 pb-32">
-      <div className="max-w-[1100px] mx-auto px-6 w-full">
-        <div className="relative min-h-[600px] flex flex-col justify-center items-center text-center">
-          {/* Background Image Container */}
-          <div className="absolute inset-0 z-0">
-            <img
-              src={heroData.image}
-              alt="Emre Guner"
-              className="w-full h-full object-cover object-top opacity-50"
-            />
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/80 to-[#FFFEFC]" />
-          </div>
+    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+      {/* Background Image Container */}
+      <div className="absolute inset-0 z-0">
+        <img
+          src={heroData.image}
+          alt="Emre Guner"
+          className="w-full h-full object-cover object-center"
+        />
+        {/* Refined gradient overlay - lighter to let image pop but keep text readable */}
+        <div className="absolute inset-0 bg-gradient-to-t from-[#FFFEFC] via-transparent to-transparent opacity-90" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#FFFEFC]/90 via-[#FFFEFC]/40 to-transparent" />
+      </div>
 
-          {/* Content */}
+      <div className="relative z-10 w-full max-w-[1200px] mx-auto px-6 pt-20">
+        <div className="max-w-3xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="relative z-10 max-w-4xl mx-auto px-4 mt-20"
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="backdrop-blur-xl bg-white/30 border border-white/50 rounded-3xl p-8 md:p-12 shadow-2xl"
           >
-            <h1 className="text-6xl md:text-7xl font-bold text-[#1A1A1A] leading-tight mb-6 tracking-tight">
-              {heroData.headline}
+            <h1 className="text-5xl md:text-7xl font-bold leading-[1.1] mb-8 tracking-tight">
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#1A1A1A] to-[#4a4a4a]">
+                {heroData.headline}
+              </span>
             </h1>
 
             {/* Latest Video Button */}
             <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
               onClick={() => setVideoModalOpen(true)}
-              className="inline-flex items-center gap-3 px-6 py-3 bg-white/80 backdrop-blur-md border border-white/40 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group"
+              className="group relative inline-flex items-center gap-4 px-8 py-4 bg-[#1A1A1A] text-white rounded-full overflow-hidden shadow-xl transition-all hover:shadow-[#1A1A1A]/30"
             >
-              <div className="bg-[#37352F] rounded-full p-2 group-hover:bg-black transition-colors">
-                <Play size={16} className="text-white fill-white" />
+              <div className="absolute inset-0 bg-gradient-to-r from-[#333] to-[#1A1A1A] opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="relative flex items-center gap-3">
+                <div className="bg-white/20 rounded-full p-2 group-hover:bg-white/30 transition-colors">
+                  <Play size={20} className="fill-white" />
+                </div>
+                <span className="text-lg font-medium tracking-wide">Watch Latest Video</span>
               </div>
-              <span className="text-sm font-medium text-[#37352F]">Watch Latest Video</span>
             </motion.button>
           </motion.div>
         </div>
@@ -50,17 +56,17 @@ const Hero = () => {
       {/* Video Modal */}
       {videoModalOpen && (
         <div
-          className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4"
+          className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4"
           onClick={() => setVideoModalOpen(false)}
         >
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
+            initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="bg-white rounded-lg p-2 max-w-4xl w-full"
+            className="bg-black rounded-2xl overflow-hidden max-w-5xl w-full shadow-2xl ring-1 ring-white/10"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="aspect-video bg-[#E0E0E0] rounded flex items-center justify-center">
-              <p className="text-[#787774]">Video Player Placeholder</p>
+            <div className="aspect-video bg-[#1a1a1a] flex items-center justify-center relative group">
+              <p className="text-white/50 group-hover:text-white transition-colors">Video Player Placeholder</p>
             </div>
           </motion.div>
         </div>
