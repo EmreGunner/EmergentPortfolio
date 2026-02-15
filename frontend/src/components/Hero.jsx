@@ -7,35 +7,51 @@ const Hero = () => {
   const [videoModalOpen, setVideoModalOpen] = useState(false);
 
   return (
-    <section className="relative min-h-[90vh] flex items-center overflow-hidden">
-      {/* Background Image Container */}
-      <div className="absolute inset-0 z-0">
+    <section className="relative min-h-[85vh] md:min-h-screen flex flex-col justify-center md:justify-center overflow-hidden bg-gradient-to-b from-[#f8f9fa] to-white md:bg-none">
+
+      {/* Desktop Background Image - Hidden on Mobile */}
+      <div className="hidden md:block absolute inset-0 z-0">
         <img
           src={heroData.image}
           alt="Emre Guner"
           className="w-full h-full object-cover object-center"
         />
-        {/* Gradient Overlay - darker on left for text readability, clear on right for image */}
+        {/* Desktop Gradients */}
         <div className="absolute inset-0 bg-gradient-to-r from-[#FFFEFC] via-[#FFFEFC]/80 to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-t from-[#FFFEFC] via-transparent to-transparent opacity-80" />
       </div>
 
-      <div className="relative z-10 w-full max-w-[1200px] mx-auto px-6 pt-20">
-        <div className="max-w-2xl">
+      <div className="relative z-10 w-full max-w-[1200px] mx-auto px-6 py-12 md:pt-20">
+        <div className="max-w-md md:max-w-2xl mx-auto md:mx-0 flex flex-col items-center md:items-start gap-8 md:gap-8">
+
+          {/* Mobile Avatar - Visible only on Mobile */}
           <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            className="flex flex-col items-start gap-8"
+            initial={{ scale: 0.5, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            className="md:hidden relative w-40 h-40 rounded-full overflow-hidden border-[6px] border-white shadow-2xl mb-2"
           >
-            <h1 className="text-6xl md:text-8xl font-bold leading-[1.1] tracking-tight text-[#1A1A1A]">
-              AI Marketing <br />
+            <img
+              src={heroData.image}
+              alt="Emre Guner Profile"
+              className="w-full h-full object-cover"
+            />
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+            className="flex flex-col items-center md:items-start gap-6 md:gap-8 text-center md:text-left"
+          >
+            <h1 className="text-4xl sm:text-5xl md:text-8xl font-bold leading-[1.1] tracking-tight text-[#1A1A1A]">
+              AI Marketing <br className="hidden md:block" />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#1A1A1A] to-[#4a4a4a]">
                 For Real Estate
               </span>
             </h1>
 
-            <p className="text-xl md:text-2xl text-[#4a4a4a] max-w-lg leading-relaxed">
+            <p className="text-lg md:text-2xl text-[#4a4a4a] max-w-lg leading-relaxed px-4 md:px-0">
               Helping agencies scale through intelligent automation and data-driven strategies.
             </p>
 
@@ -44,7 +60,7 @@ const Hero = () => {
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               onClick={() => setVideoModalOpen(true)}
-              className="group relative inline-flex items-center gap-4 px-8 py-4 bg-[#1A1A1A] text-white rounded-full overflow-hidden shadow-xl hover:shadow-2xl hover:shadow-[#1A1A1A]/20 transition-all duration-300"
+              className="group relative inline-flex items-center gap-4 px-8 py-4 bg-[#1A1A1A] text-white rounded-full overflow-hidden shadow-xl hover:shadow-2xl hover:shadow-[#1A1A1A]/20 transition-all duration-300 w-full md:w-auto justify-center md:justify-start"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-[#333] to-[#1A1A1A] opacity-0 group-hover:opacity-100 transition-opacity" />
               <div className="relative flex items-center gap-3">
