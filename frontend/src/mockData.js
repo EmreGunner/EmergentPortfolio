@@ -2,7 +2,7 @@
 
 export const heroData = {
   headline: "AI Marketing For Real Estate Agencies",
-  image: "https://images.unsplash.com/photo-1641376028786-da6f7d7897d3?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1ODh8MHwxfHNlYXJjaHwyfHxwcm9mZXNzaW9uYWwlMjBzcGVha2VyfGVufDB8fHx8MTc3MTE3NDI2Nnww&ixlib=rb-4.1.0&q=85",
+  image: "/images/Untitled design (25).png",
   latestVideo: {
     thumbnail: "https://images.unsplash.com/photo-1709377303352-7c845ac999ac?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1ODh8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBzcGVha2VyfGVufDB8fHx8MTc3MTE3NDI2Nnww&ixlib=rb-4.1.0&q=85",
     url: "https://youtube.com"
