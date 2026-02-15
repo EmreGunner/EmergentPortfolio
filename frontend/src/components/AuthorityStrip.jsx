@@ -26,9 +26,13 @@ const AuthorityStrip = () => {
                 whileHover={{ opacity: 1, scale: 1.05 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.3, delay: index * 0.1 }}
-                className="h-8 flex items-center grayscale hover:grayscale-0 transition-all duration-200"
+                className="h-8 flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-200"
               >
-                <span className="text-2xl font-bold text-[#37352F]">{partner.name}</span>
+                <img
+                  src={partner.logo}
+                  alt={partner.name}
+                  className="h-full w-auto object-contain max-w-[120px]"
+                />
               </motion.div>
             ))}
           </div>
@@ -56,9 +60,13 @@ const AuthorityStrip = () => {
                 whileHover={{ opacity: 1, scale: 1.05 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.3, delay: index * 0.1 }}
-                className="h-8 flex items-center grayscale hover:grayscale-0 transition-all duration-200"
+                className="h-8 flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-200"
               >
-                <span className="text-2xl font-bold text-[#37352F]">{client.name}</span>
+                <img
+                  src={client.logo}
+                  alt={client.name}
+                  className="h-full w-auto object-contain max-w-[120px]"
+                />
               </motion.div>
             ))}
             {/* Certification Badges */}

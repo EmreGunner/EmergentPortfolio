@@ -7,7 +7,7 @@ const Hero = () => {
   const [videoModalOpen, setVideoModalOpen] = useState(false);
 
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-[90vh] flex items-center overflow-hidden">
       {/* Background Image Container */}
       <div className="absolute inset-0 z-0">
         <img
@@ -15,31 +15,36 @@ const Hero = () => {
           alt="Emre Guner"
           className="w-full h-full object-cover object-center"
         />
-        {/* Refined gradient overlay - lighter to let image pop but keep text readable */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#FFFEFC] via-transparent to-transparent opacity-90" />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#FFFEFC]/90 via-[#FFFEFC]/40 to-transparent" />
+        {/* Gradient Overlay - darker on left for text readability, clear on right for image */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#FFFEFC] via-[#FFFEFC]/80 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#FFFEFC] via-transparent to-transparent opacity-80" />
       </div>
 
       <div className="relative z-10 w-full max-w-[1200px] mx-auto px-6 pt-20">
-        <div className="max-w-3xl">
+        <div className="max-w-2xl">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="backdrop-blur-xl bg-white/30 border border-white/50 rounded-3xl p-8 md:p-12 shadow-2xl"
+            className="flex flex-col items-start gap-8"
           >
-            <h1 className="text-5xl md:text-7xl font-bold leading-[1.1] mb-8 tracking-tight">
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#1A1A1A] to-[#4a4a4a]">
-                {heroData.headline}
+            <h1 className="text-6xl md:text-8xl font-bold leading-[1.1] tracking-tight text-[#1A1A1A]">
+              AI Marketing <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#1A1A1A] to-[#4a4a4a]">
+                For Real Estate
               </span>
             </h1>
+
+            <p className="text-xl md:text-2xl text-[#4a4a4a] max-w-lg leading-relaxed">
+              Helping agencies scale through intelligent automation and data-driven strategies.
+            </p>
 
             {/* Latest Video Button */}
             <motion.button
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               onClick={() => setVideoModalOpen(true)}
-              className="group relative inline-flex items-center gap-4 px-8 py-4 bg-[#1A1A1A] text-white rounded-full overflow-hidden shadow-xl transition-all hover:shadow-[#1A1A1A]/30"
+              className="group relative inline-flex items-center gap-4 px-8 py-4 bg-[#1A1A1A] text-white rounded-full overflow-hidden shadow-xl hover:shadow-2xl hover:shadow-[#1A1A1A]/20 transition-all duration-300"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-[#333] to-[#1A1A1A] opacity-0 group-hover:opacity-100 transition-opacity" />
               <div className="relative flex items-center gap-3">

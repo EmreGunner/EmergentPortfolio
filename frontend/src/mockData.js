@@ -1,7 +1,7 @@
 // Mock data for Emre Guner Personal Hub
 
 export const heroData = {
-  headline: "AI Marketing For Real Estate Agencies",
+  headline: "AI Marketing ",
   image: "/images/Untitled design (25).png",
   latestVideo: {
     thumbnail: "https://images.unsplash.com/photo-1709377303352-7c845ac999ac?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1ODh8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBzcGVha2VyfGVufDB8fHx8MTc3MTE3NDI2Nnww&ixlib=rb-4.1.0&q=85",
@@ -27,7 +27,7 @@ export const clients = [
 export const linkHubItems = [
   {
     title: "Aimlak",
-    subtitle: "AI Marketing For Real Estate Agencies",
+    subtitle: "AI Marketing ",
     url: "#aimlak"
   },
   {
@@ -70,7 +70,7 @@ export const experiments = [
     title: "Content Experiment 2",
     tag: "Case Study",
     image: "https://images.unsplash.com/photo-1763718432504-7716caff6e99?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODh8MHwxfHNlYXJjaHwxfHxBSSUyMGRhc2hib2FyZHxlbnwwfHx8fDE3NzExNzQyNzJ8MA&ixlib=rb-4.1.0&q=85",
-    description: "Lead generation automation for real estate agencies"
+    description: "Lead generation automation "
   },
   {
     id: 3,
@@ -112,7 +112,7 @@ export const blogPosts = [
   {
     id: 1,
     label: "First 1 post",
-    title: "I Marketing For Real Estate Agencies",
+    title: "I Marketing ",
     excerpt: "Marketing for business in normous opportunities are now proceeding the operating for our streaming hut or Real Estate agenci...",
     url: "/blog/ai-marketing-real-estate"
   },
@@ -126,8 +126,8 @@ export const blogPosts = [
   {
     id: 3,
     label: "First 3 post",
-    title: "WhatsApp AI Agent For Real Estate Agencies",
-    excerpt: "Emre Guner writes about success of comping in agent involvements about WhatsApp AI for Real estate agencies, Ito as walkability...",
+    title: "WhatsApp AI Agent ",
+    excerpt: "Emre Guner writes about success of comping in agent involvements about WhatsApp AI , Ito as walkability...",
     url: "/blog/whatsapp-ai-agent"
   }
 ];
