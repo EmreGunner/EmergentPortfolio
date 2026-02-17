@@ -1,17 +1,17 @@
 // Mock data for Emre Guner Personal Hub
 
 export const heroData = {
-  headline: "I Build AI Systems That Replace Manual Work",
-  subheadline: "Former PwC consultant turned AI automation architect. I help businesses eliminate repetitive tasks with intelligent systems that work 24/7.",
+  headline: "Emre Guner",
+  subheadline: "Ai Content Creator",
   image: "/images/Untitled design (25).png",
   latestVideo: {
-    thumbnail: "https://images.unsplash.com/photo-1709377303352-7c845ac999ac?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1ODh8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBzcGVha2VyfGVufDB8fHx8MTc3MTE3NDI2Nnww&ixlib=rb-4.1.0&q=85",
+    thumbnail: "/images/workshop_whatsapp_thumbnail.png",
     url: "https://youtube.com/@MrGunnerAi"
   }
 };
 
 export const trustBadges = [
-  { label: "Former PwC", icon: "briefcase" },
+  { label: "Fortune 500 Advisor", icon: "briefcase" },
   { label: "6,800+ Community", icon: "users" },
   { label: "50+ Automations Shipped", icon: "zap" },
   { label: "Big 4 Alumni", icon: "award" }
@@ -20,7 +20,6 @@ export const trustBadges = [
 export const stats = [
   { number: "50+", label: "Automations Delivered" },
   { number: "6,800+", label: "Community Members" },
-  { number: "€100K+", label: "Revenue Generated" },
   { number: "3", label: "Continents Served" }
 ];
 
@@ -34,8 +33,9 @@ export const partners = [
 ];
 
 export const clients = [
-  { name: "PwC" },
+  { name: "Big 4 Consulting" },
   { name: "Toshiba" },
+  { name: "Fortune 500 Retailer" },
   { name: "Honeywell" }
 ];
 
@@ -90,7 +90,7 @@ export const experiments = [
     title: "WhatsApp AI Sales Agent",
     tag: "Live",
     status: "live",
-    image: "https://images.unsplash.com/photo-1763718528755-4bca23f82ac3?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODh8MHwxfHNlYXJjaHwyfHxBSSUyMGRhc2hib2FyZHxlbnwwfHx8fDE3NzExNzQyNzJ8MA&ixlib=rb-4.1.0&q=85",
+    image: "/images/workshop_whatsapp_thumbnail.png",
     description: "AI agent that handles 500+ daily customer inquiries on WhatsApp, processes voice notes, and manages inventory lookups automatically."
   },
   {
@@ -115,7 +115,8 @@ export const instagramEmbeds = [
   {
     id: 1,
     url: "https://www.instagram.com/reel/DDXkBXNqfaD/",
-    caption: "Speaking at Istanbul AI Conference"
+    caption: "Istanbul AI Workshop & Keynote",
+    image: "/images/event-flyer.jpg"
   },
   {
     id: 2,

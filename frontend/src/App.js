@@ -9,6 +9,7 @@ import Experiments from "./components/Experiments";
 import Events from "./components/Events";
 import Blog from "./components/Blog";
 import Footer from "./components/Footer";
+import CalendlyWidget from "./components/CalendlyWidget";
 
 const Home = () => {
   return (
@@ -21,6 +22,7 @@ const Home = () => {
       <Events />
       <Blog />
       <Footer />
+      <CalendlyWidget />
     </div>
   );
 };
