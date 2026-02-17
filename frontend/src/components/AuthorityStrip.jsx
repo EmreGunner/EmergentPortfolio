@@ -86,7 +86,7 @@ const AuthorityStrip = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 mb-20"
+          className="flex flex-wrap justify-center gap-12 md:gap-24 mb-20"
         >
           {stats.map((stat, index) => (
             <motion.div
@@ -95,12 +95,12 @@ const AuthorityStrip = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="text-center group"
+              className="text-center group min-w-[120px]"
             >
-              <div className="text-3xl md:text-4xl font-bold text-[#1A1A1A] tracking-tight mb-1">
+              <div className="text-4xl md:text-5xl font-bold text-[#1A1A1A] tracking-tight mb-2">
                 <AnimatedNumber target={stat.number} />
               </div>
-              <p className="text-sm text-[#888] font-medium">{stat.label}</p>
+              <p className="text-sm md:text-base text-[#888] font-medium uppercase tracking-wider">{stat.label}</p>
             </motion.div>
           ))}
         </motion.div>

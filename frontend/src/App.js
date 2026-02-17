@@ -1,15 +1,25 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "@/App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import Navigation from "./components/Navigation";
 import Hero from "./components/Hero";
 import AuthorityStrip from "./components/AuthorityStrip";
 import LinkHub from "./components/LinkHub";
-import Experiments from "./components/Experiments";
+import Community from "./components/Community";
+import Resources from "./components/Resources";
+import ResourceDetail from "./components/ResourceDetail";
 import Events from "./components/Events";
 import Blog from "./components/Blog";
 import Footer from "./components/Footer";
 import CalendlyWidget from "./components/CalendlyWidget";
+
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  return null;
+};
 
 const Home = () => {
   return (
@@ -17,8 +27,9 @@ const Home = () => {
       <Navigation />
       <Hero />
       <AuthorityStrip />
+      <Community />
       <LinkHub />
-      <Experiments />
+      <Resources />
       <Events />
       <Blog />
       <Footer />
@@ -31,8 +42,10 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/resources/:id" element={<ResourceDetail />} />
         </Routes>
       </BrowserRouter>
     </div>

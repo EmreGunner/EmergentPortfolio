@@ -20,7 +20,7 @@ export const trustBadges = [
 export const stats = [
   { number: "50+", label: "Automations Delivered" },
   { number: "6,800+", label: "Community Members" },
-  { number: "3", label: "Continents Served" }
+  { number: "4", label: "Continents Served" }
 ];
 
 export const partners = [
@@ -42,7 +42,7 @@ export const clients = [
 export const linkHubItems = [
   {
     title: "Leda",
-    subtitle: "AI-Powered Real Estate Platform",
+    subtitle: "AI Marketing Agency",
     url: "#leda",
     icon: "🏠",
     tag: "Company"
@@ -84,30 +84,45 @@ export const linkHubItems = [
   }
 ];
 
-export const experiments = [
+export const resources = [
   {
-    id: 1,
+    id: "whatsapp-ai-agent",
     title: "WhatsApp AI Sales Agent",
-    tag: "Live",
+    tag: "Event",
+    tags: ["Video", "Event", "Files"],
     status: "live",
     image: "/images/workshop_whatsapp_thumbnail.png",
-    description: "AI agent that handles 500+ daily customer inquiries on WhatsApp, processes voice notes, and manages inventory lookups automatically."
+    description: "AI agent that handles 500+ daily customer inquiries on WhatsApp, processes voice notes, and manages inventory lookups automatically.",
+    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    leadMagnetTitle: "The WhatsApp Automation Blueprint",
+    leadMagnetDescription: "Download the complete technical setup guide and n8n workflow templates for building your own AI sales agent.",
+    details: "This resource covers the end-to-end architecture of a production-ready WhatsApp AI agent. Learn how to handle media, maintain conversation state, and integrate with real-time inventory systems."
   },
   {
-    id: 2,
+    id: "ai-content-pipeline",
     title: "AI Content Pipeline",
     tag: "Case Study",
+    tags: ["Guide", "Files"],
     status: "case-study",
     image: "https://images.unsplash.com/photo-1763718432504-7716caff6e99?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODh8MHwxfHNlYXJjaHwxfHxBSSUyMGRhc2hib2FyZHxlbnwwfHx8fDE3NzExNzQyNzJ8MA&ixlib=rb-4.1.0&q=85",
-    description: "End-to-end automation for real estate content — from listing data to published social posts in under 60 seconds."
+    description: "End-to-end automation for real estate content — from listing data to published social posts in under 60 seconds.",
+    videoUrl: "",
+    leadMagnetTitle: "Real Estate AI Stack",
+    leadMagnetDescription: "Get the directory of tools and prompts I use to automate 80% of content creation for property listings.",
+    details: "Automating content is more than just using GPT. It's about data bridges. This resource shows you how to connect Zillow data to Canva and Instagram via n8n."
   },
   {
-    id: 3,
+    id: "lead-qualification-engine",
     title: "Lead Qualification Engine",
     tag: "Beta",
+    tags: ["Demo", "Video"],
     status: "beta",
     image: "https://images.unsplash.com/photo-1761195696590-3490ea770aa1?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzV8MHwxfHNlYXJjaHwxfHxhdXRvbWF0aW9uJTIwdGVjaHxlbnwwfHx8fDE3NzExNzQyODV8MA&ixlib=rb-4.1.0&q=85",
-    description: "AI-powered lead scoring system that qualifies prospects and routes them to the right sales rep in real-time."
+    description: "AI-powered lead scoring system that qualifies prospects and routes them to the right sales rep in real-time.",
+    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    leadMagnetTitle: "Qualification Script Library",
+    leadMagnetDescription: "The exact system prompts I use to qualify high-ticket B2B leads via AI voice and chat.",
+    details: "Reduce response time to zero. This engine qualifies leads 24/7 and only puts the highest intent prospects on your calendar."
   }
 ];
 
@@ -165,6 +180,5 @@ export const blogPosts = [
 export const socialLinks = [
   { name: "LinkedIn", url: "https://www.linkedin.com/in/emregunner/", icon: "Linkedin" },
   { name: "YouTube", url: "https://www.youtube.com/@MrGunnerAi", icon: "Youtube" },
-  { name: "Twitter", url: "https://twitter.com/mrgunner_ai", icon: "Twitter" },
   { name: "Instagram", url: "https://www.instagram.com/mrgunner.ai/", icon: "Instagram" }
 ];

@@ -33,7 +33,7 @@ const Navigation = () => {
 
   const navItems = [
     { label: 'About', href: '#about' },
-    { label: 'Work', href: '#experiments' },
+    { label: 'Resources', href: '#resources' },
     { label: 'Events', href: '#events' },
     { label: 'Blog', href: '#blog' },
   ];
@@ -41,9 +41,9 @@ const Navigation = () => {
   return (
     <>
       <motion.nav
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled
-            ? 'bg-[#FFFEFC]/98 backdrop-blur-xl shadow-[0_1px_3px_rgba(0,0,0,0.08)] border-b border-black/[0.04]'
-            : 'bg-[#FFFEFC]/80 backdrop-blur-md'
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
+          ? 'bg-white/95 backdrop-blur-md shadow-sm border-b border-black/5 py-3'
+          : 'bg-white/40 backdrop-blur-sm py-5'
           }`}
         initial={{ y: -100 }}
         animate={{ y: 0 }}
@@ -52,20 +52,20 @@ const Navigation = () => {
         <div className="max-w-[1100px] mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             {/* Logo */}
-            <a href="/" className="text-[#1A1A1A] font-bold text-lg tracking-[-0.03em] hover:opacity-70 transition-opacity duration-300">
+            <a href="/" className="text-[#1A1A1A] font-extrabold text-xl lg:text-2xl tracking-[-0.05em] hover:opacity-70 transition-opacity duration-300">
               EMRE GUNER
             </a>
 
             {/* Center Menu — Desktop */}
-            <div className="hidden md:flex items-center gap-1">
+            <div className="hidden md:flex items-center gap-2">
               {navItems.map((item) => (
                 <a
                   key={item.label}
                   href={item.href}
-                  className="relative px-4 py-2 text-[#4a4a4a] text-sm font-medium hover:text-[#1A1A1A] transition-colors duration-200 group"
+                  className="relative px-6 py-2 text-[#4a4a4a] text-base lg:text-lg font-bold hover:text-[#1A1A1A] transition-colors duration-200 group"
                 >
                   {item.label}
-                  <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[2px] bg-[#1A1A1A] group-hover:w-4 transition-all duration-300 rounded-full" />
+                  <span className="absolute bottom-1 left-1/2 -translate-x-1/2 w-0 h-[3px] bg-[#1A1A1A] group-hover:w-6 transition-all duration-300 rounded-full" />
                 </a>
               ))}
             </div>

@@ -24,65 +24,35 @@ const Events = () => {
 
   return (
     <section className="py-16 md:py-24 bg-[#FFFEFC]" id="events">
-      <div className="max-w-[1100px] mx-auto px-6">
+      <div className="max-w-[1240px] mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="mb-10 text-center"
+          className="mb-16 text-center"
         >
-          <p className="text-[11px] font-semibold text-[#aaa] tracking-[0.15em] uppercase mb-3">
-            Community
+          <p className="text-[12px] font-black text-[#aaa] tracking-[0.25em] uppercase mb-4">
+            Global Presence
           </p>
-          <h2 className="text-3xl md:text-4xl font-bold text-[#1A1A1A] tracking-tight mb-3">
-            Events & Speaking
+          <h2 className="text-4xl md:text-6xl font-bold text-[#1A1A1A] tracking-tight mb-6 leading-tight">
+            Speaking & <br /><span className="text-[#888]">Global Impact</span>
           </h2>
-          <p className="text-[#888] text-lg max-w-xl mx-auto">
-            Conferences, workshops, and community meetups across 3 continents
+          <p className="text-[#666] text-xl md:text-2xl leading-relaxed max-w-2xl mx-auto">
+            From keynote stages to intimate workshops, driving the conversation on AI across 3 continents.
           </p>
         </motion.div>
 
-        {/* Meetup Groups */}
-        <motion.div
-          initial={{ opacity: 0, y: 15 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-          className="grid sm:grid-cols-2 gap-4 max-w-2xl mx-auto mb-12"
-        >
-          {meetupGroups.map((group, index) => (
-            <a
-              key={group.name}
-              href={group.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group flex items-center justify-between p-5 bg-white border border-[#eee] rounded-xl hover:border-[#1A1A1A]/20 hover:shadow-[0_4px_20px_rgba(0,0,0,0.06)] transition-all duration-300"
-            >
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-lg bg-[#ED1C40]/8 flex items-center justify-center">
-                  <Users size={18} className="text-[#ED1C40]" />
-                </div>
-                <div>
-                  <p className="font-semibold text-[#1A1A1A] text-sm">{group.name}</p>
-                  <p className="text-xs text-[#888]">{group.members} members</p>
-                </div>
-              </div>
-              <ExternalLink size={16} className="text-[#ccc] group-hover:text-[#1A1A1A] transition-colors" />
-            </a>
-          ))}
-        </motion.div>
-
-        {/* Instagram Embeds */}
+        {/* Instagram Embeds — VISUAL PROOF FIRST */}
         <motion.div
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto"
+          className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-20"
         >
           {instagramEmbeds.map((embed) => (
-            <div key={embed.id} className="bg-white rounded-xl border border-[#eee] overflow-hidden shadow-sm">
+            <div key={embed.id} className="bg-white rounded-[2.5rem] border border-[#eee] overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-500">
               <blockquote
                 className="instagram-media"
                 data-instgrm-captioned
@@ -115,8 +85,8 @@ const Events = () => {
                   </a>
                 </div>
               </blockquote>
-              <div className="px-4 pb-4">
-                <p className="text-xs text-[#888] font-medium">{embed.caption}</p>
+              <div className="px-8 pb-8">
+                <p className="text-[10px] text-[#888] font-black uppercase tracking-widest leading-relaxed">{embed.caption}</p>
               </div>
             </div>
           ))}

@@ -40,17 +40,17 @@ const LinkHub = () => {
 
               {/* Content */}
               <div className="flex-1 min-w-0">
-                <div className="flex items-center gap-2 mb-0.5">
-                  <h3 className="text-[15px] font-semibold text-[#1A1A1A] group-hover:text-[#1A1A1A]">
+                <div className="flex items-center gap-2 mb-1">
+                  <h3 className="text-lg md:text-xl font-bold text-[#1A1A1A] group-hover:text-[#1A1A1A]">
                     {item.title}
                   </h3>
                   {item.tag && (
-                    <span className="px-2 py-0.5 text-[10px] font-semibold text-[#888] bg-[#f5f5f5] rounded-full uppercase tracking-wide">
+                    <span className="px-2.5 py-0.5 text-[10px] font-bold text-[#888] bg-[#f5f5f5] rounded-full uppercase tracking-wider">
                       {item.tag}
                     </span>
                   )}
                 </div>
-                <p className="text-sm text-[#888] truncate">{item.subtitle}</p>
+                <p className="text-base text-[#666] truncate">{item.subtitle}</p>
               </div>
 
               {/* Arrow */}
